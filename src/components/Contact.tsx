@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { Github, FileTextIcon, Linkedin, Mail } from 'lucide-react';
 import SectionHeading from './SectionHeading';
 
 interface SocialLink {
@@ -32,7 +32,7 @@ const socialLinks: SocialLink[] = [
 
 const Contact: React.FC = () => {
   return (
-    <section id="contact" className="py-20 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900">
+    <section id="contact" className="pt-20 pb-16 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900">
       <div className="container mx-auto px-4">
         <SectionHeading title="Hablemos" subtitle="¿Tienes un proyecto en mente?" />
         
@@ -59,6 +59,16 @@ const Contact: React.FC = () => {
                 <span className="font-medium">{link.name}</span>
               </a>
             ))}
+          </div>
+          <div className="flex justify-center mt-12">
+            <a
+              href="/CV.pdf"
+              target="_blank"
+              className="flex items-center gap-2 text-gray-400 hover:text-yellow-400 transition-colors"
+            >
+              <span>Ver CV</span>
+              <FileTextIcon size={18} />
+            </a>
           </div>
         </div>
       </div>
