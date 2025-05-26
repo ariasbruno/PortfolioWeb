@@ -65,7 +65,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
               </a>
             )}
             
-            {project.githubUrl && (
+            {project.githubUrl ? (
               <a 
                 href={project.githubUrl} 
                 target="_blank" 
@@ -76,6 +76,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                 <Github size={16} />
                 <span>Código</span>
               </a>
+            ): (
+              <p 
+              className="flex items-center gap-1 text-sm text-gray-400 hover:text-yellow-400 transition-colors"
+              aria-label={project.title}
+            >
+              <Github size={16} />
+              <span>Repositorio privado</span>
+            </p>
             )}
           </div>
         </div>

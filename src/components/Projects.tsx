@@ -47,7 +47,7 @@ const projects: Project[] = [
     githubUrl: "https://github.com/ariasbruno/RinconCasero-public"
   },
   {
-    id: 1,
+    id: 2,
     title: "QuickNotes",
     description: "QuickNotes, mi primer proyecto web, es una eficiente aplicación de notas 100% Vanilla JS (HTML/CSS/JS). Permite crear, editar y gestionar apuntes fácilmente, sin librerías externas.",
     features: [
@@ -79,6 +79,34 @@ const projects: Project[] = [
     technologies: ["HTML", "CSS", "JavaScript"],
     liveUrl: "https://ariasbruno.github.io/QuickNotes/",
     githubUrl: "https://github.com/ariasbruno/QuickNotes"
+  },
+  {
+    id: 3,
+    title: "Madetodo (incompleto)",
+    description: "Este es un proyecto de e-commerce inspirado en madetodo.com.ar, desarrollado como un desafío. El proyecto está construido con NextJS 15 y Strapi 5",
+    features: [
+      "Filtrado por categorías",
+      "Búsqueda de productos",
+      "Paginación de resultados",
+      "Ordenamiento por diferentes criterios (precio, nombre, etc.)",
+      "Menú de navegación responsive",
+      "Barra de búsqueda con autocompletado",
+      "Carrito de compras con contador de items",
+      "Productos relacionados",
+      "Banner de anuncios rotativos",
+      "Formulario de contacto",
+    ],
+    technicalDetails: [
+      "Framework: Next.js con TypeScript",
+      "Tailwind CSS",
+      "Rutas dinámicas",
+      "Diseño responsive",
+      "CMS: Strapi",
+      "PostgreSQL",
+    ],
+    image: "/madetodo.png",
+    technologies: ["Next.js", "Strapi 5", "TypeScript", "PostgreSQL", "Tailwind CSS"],
+    liveUrl: "https://madetodo-frontend.vercel.app",
   },
 ];
 
