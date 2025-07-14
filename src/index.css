@@ -1,3 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Poppins', system-ui, sans-serif;
+    background: #FAF3E3 url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='2' cy='2' r='2' fill='%23FFF8B0' fill-opacity='0.18'/%3E%3C/svg%3E");
+    min-height: 100vh;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    line-height: 1.6;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  /* Scrollbar personalizada */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #FAF3E3;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #76aaff;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #4880fa;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #3B2F2F;
+}
+
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5em;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.4em;
+}
+
+p, li, span, a, button {
+  font-size: 1.08rem;
+  font-weight: 400;
+  color: #4B3F2F;
+}
+
+.font-merriweather {
+  font-family: "Merriweather";
+}
+
+.font-playfair-display {
+  font-family: "Playfair Display";
+}
+
+.font-roboto-slab {
+  font-family: "Roboto Slab";
+}
+
+@layer components {
+  /* Bordes dibujados a mano mejorados */
+  .hand-drawn-border {
+    border: 3px solid #000000;
+    box-shadow: 4px 4px 0px #F59E0B;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  .hand-drawn-border:hover {
+    box-shadow: 6px 6px 0px #F59E0B;
+    transform: translate(-2px, -2px);
+  }
+
+  /* Botones mejorados */
+  .btn-primary {
+    background-color: #3B82F6;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: all 0.3s;
+  }
+  
+  .btn-primary:hover {
+    background-color: #2563EB;
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+  }
+  
+  .btn-primary:active {
+    transform: scale(0.95);
+  }
+
+  .btn-secondary {
+    background-color: #F59E0B;
+    color: black;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: all 0.3s;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #D97706;
+    box-shadow: 0 0 20px rgba(245, 158, 11, 0.3);
+  }
+  
+  .btn-secondary:active {
+    transform: scale(0.95);
+  }
+
+  .btn-outline {
+    border: 2px solid #3B82F6;
+    color: #3B82F6;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: all 0.3s;
+  }
+  
+  .btn-outline:hover {
+    background-color: #3B82F6;
+    color: white;
+  }
+  
+  .btn-outline:active {
+    transform: scale(0.95);
+  }
+
+  /* Tarjetas mejoradas */
+  .card {
+    background-color: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    transition: all 0.3s;
+  }
+  
+  .card:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.16);
+    transform: translateY(-4px);
+  }
+
+  .card-interactive {
+    background-color: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+  
+  .card-interactive:hover {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+  }
+
+  /* Secciones con patrones sutiles */
+  .section-pattern {
+    background-image: 
+      radial-gradient(circle at 25% 25%, rgba(59, 130, 246, 0.03) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, rgba(245, 158, 11, 0.03) 0%, transparent 50%);
+  }
+
+  /* Efectos de texto */
+  .text-gradient {
+    background: linear-gradient(to right, #3B82F6, #F59E0B);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Animaciones de entrada */
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+  }
+
+  .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Efectos de hover mejorados */
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Decoraciones sutiles */
+  .decoration-dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: #F59E0B;
+    border-radius: 9999px;
+  }
+
+  .decoration-line {
+    width: 3rem;
+    height: 0.25rem;
+    background: linear-gradient(to right, #3B82F6, #F59E0B);
+    border-radius: 9999px;
+  }
+
+  /* Contenedores con bordes decorativos */
+  .container-decorated {
+    position: relative;
+  }
+
+  .container-decorated::before {
+    content: '';
+    position: absolute;
+    top: -0.5rem;
+    left: -0.5rem;
+    width: 1rem;
+    height: 1rem;
+    border-left: 2px solid #3B82F6;
+    border-top: 2px solid #3B82F6;
+  }
+
+  .container-decorated::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    right: -0.5rem;
+    width: 1rem;
+    height: 1rem;
+    border-right: 2px solid #F59E0B;
+    border-bottom: 2px solid #F59E0B;
+  }
+}
+
+:root {
+  --primary-yellow: #FFE066;
+  --primary-yellow-dark: #FFD43B;
+  --primary-blue: #6CA6E5;
+}
+
+.text-primary-yellow { color: var(--primary-yellow); }
+.bg-primary-yellow { background-color: var(--primary-yellow); }
+.bg-primary-yellow\/10 { background-color: rgba(255, 224, 102, 0.1); }
+.bg-primary-yellow\/20 { background-color: rgba(255, 224, 102, 0.2); }

@@ -11,91 +11,88 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   const [showDetail, setShowDetail] = useState(false);
 
   return (
-    <>
-      <div className="group relative overflow-hidden rounded-xl bg-gray-900 transition-all duration-300 hover:shadow-xl hover:shadow-yellow-400/10">
-        <div className="relative h-48 overflow-hidden">
-          <img 
-            src={project.image} 
-            alt={project.title} 
-            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-70"></div>
-        </div>
-        
-        <div className="p-6">
-          <h3 className="text-xl font-bold mb-2 group-hover:text-yellow-400 transition-colors">
-            {project.title}
-          </h3>
-          
-          <p className="text-gray-300 mb-4">
-            {project.description}
-          </p>
-          
-          <div className="mb-4 flex flex-wrap gap-2">
-            {project.technologies.map((tech, index) => (
-              <span 
-                key={index} 
-                className="inline-block px-2 py-1 text-xs font-medium rounded-full bg-gray-800 text-gray-300 border border-gray-700"
-              >
-                {tech}
-              </span>
-            ))}
-          </div>
-          
-          <div className="flex gap-4">
-            <button
-              onClick={() => setShowDetail(true)}
-              className="flex items-center gap-1 text-sm text-gray-400 hover:text-yellow-400 transition-colors"
-              aria-label={`Ver más detalles de ${project.title}`}
+    <div className="relative flex flex-col justify-between bg-[#FAF3E3] rounded-2xl shadow-lg hover:shadow-2xl border border-[#F6F1EB] transition-all duration-500 overflow-hidden group w-full h-full">
+      {/* Imagen con overlay */}
+      <div className="relative w-full h-48 overflow-hidden">
+        <img
+          src={project.image}
+          alt={project.title}
+          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+        />
+      </div>
+      {/* Contenido */}
+      <div className="flex flex-col flex-1 p-6">
+        <h3 className="text-xl font-bold mb-3 group-hover:text-primary-blue transition-colors duration-300 font-display">
+          {project.title}
+        </h3>
+        <p className="text-neutral-gray mb-4 line-clamp-3 leading-relaxed">
+          {project.description}
+        </p>
+        {/* Tecnologías */}
+        <div className="mb-6 flex flex-wrap gap-2">
+          {project.technologies.slice(0, 4).map((tech, index) => (
+            <span
+              key={index}
+              className="inline-block px-3 py-1 text-xs font-medium rounded-full bg-primary-blue/10 text-primary-blue border border-primary-blue/20 hover:bg-primary-blue hover:text-white transition-colors duration-300"
             >
-              <Info size={16} />
-              <span>Más Info</span>
-            </button>
+              {tech}
+            </span>
+          ))}
+          {project.technologies.length > 4 && (
+            <span className="inline-block px-3 py-1 text-xs font-medium rounded-full bg-neutral-gray/10 text-neutral-gray">
+              +{project.technologies.length - 4}
+            </span>
+          )}
+        </div>
 
-            {project.liveUrl && (
-              <a 
-                href={project.liveUrl} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center gap-1 text-sm text-gray-400 hover:text-yellow-400 transition-colors"
-                aria-label={`Ver sitio de ${project.title}`}
-              >
-                <ExternalLink size={16} />
-                <span>Demo</span>
-              </a>
-            )}
-            
-            {project.githubUrl ? (
-              <a 
-                href={project.githubUrl} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center gap-1 text-sm text-gray-400 hover:text-yellow-400 transition-colors"
-                aria-label={`Ver código de ${project.title} en GitHub`}
-              >
-                <Github size={16} />
-                <span>Código</span>
-              </a>
-            ): (
-              <p 
-              className="flex items-center gap-1 text-sm text-gray-400 hover:text-yellow-400 transition-colors"
-              aria-label={project.title}
+        {/* Acciones */}
+        <div className="flex items-center justify-between mt-auto">
+          <button
+            onClick={() => setShowDetail(true)}
+            className="flex items-center gap-2 text-sm text-neutral-gray hover:text-primary-blue transition-colors duration-300 font-medium "
+            aria-label={`Ver más detalles de ${project.title}`}
+          >
+            <Info size={16} />
+            Detalles
+          </button>
+          {project.liveUrl && (
+            <a
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-sm text-neutral-gray hover:text-primary-yellow-light transition-colors duration-300 font-medium "
+              aria-label={`Ver sitio de ${project.title}`}
+            >
+              <ExternalLink size={16} />
+              Demo
+            </a>
+          )}
+          {project.githubUrl ? (
+            <a
+              href={project.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-sm text-neutral-gray hover:text-primary-blue transition-colors duration-300 font-medium "
+              aria-label={`Ver código de ${project.title} en GitHub`}
             >
               <Github size={16} />
-              <span>Repositorio privado</span>
-            </p>
-            )}
-          </div>
+              Código
+            </a>
+          ) : (
+            <span className="flex items-center gap-2 text-sm text-neutral-gray font-medium ">
+              <Github size={16} />
+              Privado
+            </span>
+          )}
         </div>
       </div>
-
       {showDetail && (
-        <ProjectDetail 
-          project={project} 
-          onClose={() => setShowDetail(false)} 
+        <ProjectDetail
+          project={project}
+          onClose={() => setShowDetail(false)}
         />
       )}
-    </>
+    </div>
   );
 };
 
