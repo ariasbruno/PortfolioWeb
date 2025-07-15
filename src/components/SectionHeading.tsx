@@ -8,11 +8,11 @@ interface SectionHeadingProps {
 const SectionHeading: React.FC<SectionHeadingProps> = ({ title, subtitle }) => {
   return (
     <div className="text-center mb-8">
-      <p className="text-yellow-400 font-medium mb-2">{subtitle}</p>
+      <p className="text-blue-600 font-medium mb-2 dark:text-yellow-400">{subtitle}</p>
       <h2 className="text-3xl md:text-4xl font-bold">
         {title}
       </h2>
-      <div className="w-24 h-1 bg-yellow-400 mx-auto mt-4 rounded-full"></div>
+      <div className="w-24 h-1 bg-blue-600 mx-auto mt-4 rounded-full dark:bg-yellow-400"></div>
     </div>
   );
 };

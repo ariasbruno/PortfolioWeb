@@ -1,0 +1,111 @@
+[
+  {
+    "id": 1,
+    "title": "Rincón Casero",
+    "description": "Este es un proyecto web moderno para una pizzeria, con funcionalidades para mostrar menú, gestionar pedidos y carrito de compras.",
+    "features": [
+      "Información Accesible sobre el Local",
+      "Filtrado de menu por categoría",
+      "Sistema de pedidos en línea",
+      "Carrito de compras",
+      "Personalización de Pedidos",
+      "Generación automática de pedido para enviar a WhatsApp",
+      "Facilidad para Contactar"
+    ],
+    "technicalDetails": [
+      "Next.js 14.1.0",
+      "React 18.2.0",
+      "TypeScript",
+      "Tailwind CSS para estilos",
+      "Radix UI para componentes de interfaz",
+      "Zustand para manejo de estado",
+      "Supabase (para backend y base de datos)",
+      "Resend (para envío de emails)",
+      "Vercel Analytics y Speed Insights para monitoreo",
+      "Zod para validación de formularios"
+    ],
+    "image": "/rincon-casero-home.png",
+    "technologies": [
+      "Next.js",
+      "TypeScript",
+      "Supabase",
+      "Tailwind CSS"
+    ],
+    "liveUrl": "https://rinconcasero.com.ar/",
+    "githubUrl": "https://github.com/ariasbruno/RinconCasero-public",
+    "featured": true
+  },
+  {
+    "id": 2,
+    "title": "QuickNotes",
+    "description": "QuickNotes, mi primer proyecto web, es una eficiente aplicación de notas 100% Vanilla JS (HTML/CSS/JS). Permite crear, editar y gestionar apuntes fácilmente, sin librerías externas.",
+    "features": [
+      "Ordenar notas (en columna o lista)",
+      "Sistema de papelera",
+      "Modo de solo lectura",
+      "Cambio entre tema claro y oscuro",
+      "Configuraciones personalizables",
+      "Preferencias de usuario guardadas",
+      "Barra lateral para navegación",
+      "Barra de herramientas para edición",
+      "Tooltips informativos",
+      "Guardado automático",
+      "Confirmaciones antes de eliminar",
+      "Opción de deshacer acciones",
+      "Interfaz responsiva"
+    ],
+    "technicalDetails": [
+      "Frontend puro con HTML5, CSS3 y JavaScript",
+      "Almacenamiento local usando localStorage",
+      "Diseño modular con separación de componentes",
+      "Sistema de temas claro/oscuro",
+      "Editor de texto enriquecido con barra de herramientas (con execCommand)",
+      "Manejo de temas con animaciones SVG",
+      "Sistema de alertas y confirmaciones",
+      "Gestión de modales y sidebars"
+    ],
+    "image": "/QuickNotes.png",
+    "technologies": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "liveUrl": "https://ariasbruno.github.io/QuickNotes/",
+    "githubUrl": "https://github.com/ariasbruno/QuickNotes",
+    "featured": true
+  },
+  {
+    "id": 3,
+    "title": "Madetodo (incompleto)",
+    "description": "Este es un proyecto de e-commerce inspirado en madetodo.com.ar, desarrollado como un desafío. El proyecto está construido con NextJS 15 y Strapi 5",
+    "features": [
+      "Filtrado por categorías",
+      "Búsqueda de productos",
+      "Paginación de resultados",
+      "Ordenamiento por diferentes criterios (precio, nombre, etc.)",
+      "Menú de navegación responsive",
+      "Barra de búsqueda con autocompletado",
+      "Carrito de compras con contador de items",
+      "Productos relacionados",
+      "Banner de anuncios rotativos",
+      "Formulario de contacto"
+    ],
+    "technicalDetails": [
+      "Framework: Next.js con TypeScript",
+      "Tailwind CSS",
+      "Rutas dinámicas",
+      "Diseño responsive",
+      "CMS: Strapi",
+      "PostgreSQL"
+    ],
+    "image": "/madetodo.png",
+    "technologies": [
+      "Next.js",
+      "Strapi 5",
+      "TypeScript",
+      "PostgreSQL",
+      "Tailwind CSS"
+    ],
+    "liveUrl": "https://madetodo-frontend.vercel.app"
+  }
+]
