@@ -1,13 +1,23 @@
 import React, { useState } from 'react';
 import { ExternalLink, Github, Info } from 'lucide-react';
-import { Project } from './Projects';
 import ProjectDetail from './ProjectDetail';
 
-interface ProjectCardProps {
+type Project = {
+  id: number;
+  title: string;
+  description: string;
+  features: string[];
+  technicalDetails: string[];
+  images: [string];
+  tech: string[];
+  liveUrl?: string;
+  githubUrl?: string;
+}
+interface Props {
   project: Project;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
+const ProjectCard: React.FC<Props> = ({ project }) => {
   const [showDetail, setShowDetail] = useState(false);
 
   return (
@@ -15,7 +25,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       <div className="group relative overflow-hidden rounded-xl bg-white transition-all duration-300 hover:shadow-xl hover:shadow-blue-600/10 dark:bg-gray-900 dark:hover:shadow-yellow-400/10">
         <div className="relative h-48 overflow-hidden">
           <img 
-            src={project.image} 
+            src={project.images[0]} 
             alt={project.title} 
             className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
           />
@@ -32,7 +42,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           </p>
           
           <div className="mb-4 flex flex-wrap gap-2">
-            {project.technologies.map((tech, index) => (
+            {project.tech.map((tech, index) => (
               <span 
                 key={index} 
                 className="inline-block px-2 py-1 text-xs font-medium rounded-full bg-gray-100 text-gray-700 border border-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:border-gray-700"

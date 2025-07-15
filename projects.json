@@ -24,8 +24,8 @@
       "Vercel Analytics y Speed Insights para monitoreo",
       "Zod para validación de formularios"
     ],
-    "image": "/rincon-casero-home.png",
-    "technologies": [
+    "images":["/rincon-casero-home.png"],
+    "tech": [
       "Next.js",
       "TypeScript",
       "Supabase",
@@ -64,8 +64,8 @@
       "Sistema de alertas y confirmaciones",
       "Gestión de modales y sidebars"
     ],
-    "image": "/QuickNotes.png",
-    "technologies": [
+    "images": ["/QuickNotes.png"],
+    "tech": [
       "HTML",
       "CSS",
       "JavaScript"
@@ -98,8 +98,8 @@
       "CMS: Strapi",
       "PostgreSQL"
     ],
-    "image": "/madetodo.png",
-    "technologies": [
+    "images": ["/madetodo.png"],
+    "tech": [
       "Next.js",
       "Strapi 5",
       "TypeScript",
